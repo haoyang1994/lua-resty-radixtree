@@ -834,7 +834,7 @@ local function match_route(self, path, opts, args)
     end
 
     while true do
-        local idx = radix.radix_tree_prev(it, path, #path)
+        local idx = radix.radix_tree_up(it, path, #path)
         if idx <= 0 then
             break
         end
